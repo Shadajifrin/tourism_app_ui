@@ -26,7 +26,7 @@ class PlaceDetails extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               place.name!,
-              style: TextStyle(fontSize: 18, color: Colors.black),
+              style: TextStyle(fontSize: 18, color: Colors.black,fontWeight: FontWeight.bold),
             ),
           ),
           Padding(
@@ -40,7 +40,7 @@ class PlaceDetails extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               place.title!,
-              style: TextStyle(fontSize: 18, color: Colors.black),
+              style: TextStyle(fontSize: 18, color: Colors.black,fontWeight: FontWeight.bold),
             ),
           ),
           SizedBox(

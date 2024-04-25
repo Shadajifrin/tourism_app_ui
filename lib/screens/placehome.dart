@@ -7,25 +7,28 @@ class PlaceHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.deepPurple
-        ,
+        backgroundColor: Colors.deepPurple,
       ),
       body: ListView.builder(
-          itemCount:placelist.length ,
-          itemBuilder: (context, index) {
-            return InkWell(
-              onTap: ()=> Navigator.pushNamed(
-                   context,
-                  "placeDetails",
-                   arguments: index
+        itemCount: placelist.length,
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 6),
+            child: InkWell(
+              onTap: () => Navigator.pushNamed(
+                context,
+                "placeDetails",
+                arguments: index,
               ),
               child: PlaceView(
                 imagepath: placelist[index].image,
                 title: placelist[index].name,
-                isFirst: index == 0, 
+                isFirst: index == 0,
               ),
-            );
-          }),
+            ),
+          );
+        },
+      ),
     );
   }
 }
